@@ -1,0 +1,71 @@
+@use "sass:color";
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {  
+    font-family: "Lato", sans-serif;
+}
+
+.row::after {
+    display: table; 
+    content: " ";
+    clear: both;
+}
+
+$card-text-color: black;
+
+@mixin linear-gradient-background($start, $end, $degree: 30deg) {
+    background-color: $start;
+    background-image: linear-gradient($degree, $start, $end);
+
+    &:hover {
+        background-image: linear-gradient($degree, $end, $start);
+    }
+}
+
+.card { 
+    $card-height: 10rem;
+ 
+    padding-top: ($card-height - 2.5rem) / 2;
+    padding-right: 3rem;
+    padding-left: 3rem;
+
+    height: $card-height;
+    border-radius: 0.5rem;
+
+    box-shadow: 0.2rem 0.2rem 1rem color.adjust($card-text-color, $alpha: -0.5);
+    color: $card-text-color;
+    text-align: center;
+
+    @include linear-gradient-background(#3ff0a6, #49e023);
+
+    &--blue {
+        @include linear-gradient-background(#423ff0, #c227ad, $degree: 90deg);
+    }
+}
+
+.card__heading {
+    color: $card-text-color;
+
+    .card--blue & {
+        color: white;
+    }
+}
+
+
+.col {
+    width: 100%;
+    float: none;
+    padding: 2rem 2rem;
+}
+
+@media (min-width: 32em) {
+    .col {
+        float: left;
+        width: 50%;
+    }
+}
