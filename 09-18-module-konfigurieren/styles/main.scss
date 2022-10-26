@@ -1,0 +1,61 @@
+@use "sass:color";
+/*
+@use "abstracts/button" with (
+    $-color-green-base: aqua
+);
+*/
+@use "abstracts" as b;
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {  
+    font-family: "Lato", sans-serif;
+}
+
+.row::after {
+    display: table; 
+    content: " ";
+    clear: both;
+}
+
+.col {
+    width: 100%;
+    float: none;
+    padding: 2rem 2rem;
+}
+
+@media (min-width: 32em) {
+    .col {
+        float: left;
+        width: 50%;
+    }
+}
+
+
+%button {
+    display: inline-block;
+    margin: 1rem;
+    padding: 1rem 3rem;
+    border: 0.05rem solid rgb(150, 150, 150);
+    border-radius: 1rem;
+    text-decoration: none;
+}
+
+
+.button-green {
+    @extend %button;
+
+    background-color: b.$button-green-color;
+    color: white;
+}
+
+.button-blue {
+    @extend %button;
+
+    background-color: b.$button-blue-color;
+    color: white;
+}
