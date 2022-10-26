@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transition-Timing-Function</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,700,800" rel="stylesheet" />
+    <style type="text/css">
+        .box {
+            background-color: red;
+            border: 1px solid rgb(100, 100, 100);
+            width: 250px;
+            height: 250px;
+            /*
+            animation-name: animate-box-bgcolor, animate-box-position;
+            animation-duration: 10s, 5s;
+            animation-timing-function: linear, ease-in-out;
+            animation-iteration-count: 1, infinite;
+            animation-delay: 2s, 0s;
+            animation-fill-mode: both, both;
+            */
+            animation: animate-box-bgcolor 10s linear 2s 1 both,
+                animate-box-position 5s ease-in-out 0s infinite both;
+        }
+
+        @keyframes animate-box-position {
+            0% {
+                transform: translate(0px, 0px);
+            }
+            50% {
+                transform: translate(50px, 10px);
+            }
+            100% {
+                transform: translate(0px, 0px);
+            }
+        }
+
+        @keyframes animate-box-bgcolor {
+            0% {
+                background-color: blue;
+            }
+            50% {
+                background-color: green;
+            }
+            100% {
+                background-color: yellow;
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
