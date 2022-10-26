@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: "Lato", sans-serif;
+}
+
+.card {
+    position: relative;
+    padding: 4rem 3rem;
+    margin: 2rem auto;
+    height: 10rem;
+    width: 15rem;
+    border-radius: 0.5rem;
+    box-shadow: 0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.5);
+    color: black;
+    text-align: center;
+
+    transition: transform 1s ease-in-out;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.card__front {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(45deg, rgb(165, 211, 113), rgb(172, 250, 69));
+    backface-visibility: hidden;
+}
+
+.card__back {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(45deg, rgb(233, 174, 108), rgb(250, 90, 69));
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
