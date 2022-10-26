@@ -1,0 +1,11 @@
+@use "sass:math";
+@use "sass:list";
+$a: 2;
+
+h1 {
+    margin: 0;
+    padding: 0;
+    background-color: gray;
+    width: math.div(100%, $a);
+    font: list.slash(20px, 30px) sans-serif;
+}
