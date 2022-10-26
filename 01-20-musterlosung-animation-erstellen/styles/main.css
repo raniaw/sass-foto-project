@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    background: url("../img/pexels-pixabay-45230.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    font-family: 'Dosis', sans-serif;
+}
+
+.header {
+    text-align: center;
+}
+
+.logo {
+    max-width: 200px;
+    margin-top: 50px;
+    margin-bottom: 35px;
+    animation: logo-fly-in 4s ease-in-out 0s 1 both,
+        logo-turbulences 15s ease-in-out 4.5s infinite none;
+}
+
+@keyframes logo-turbulences {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(0, -7px);
+    }
+    50% {
+        transform: translate(0, 7px);
+    }
+    75% {
+        transform: translate(0, 3px) scale(1.025);
+    }
+}
+
+@keyframes logo-fly-in {
+    0% {
+        opacity: 0;
+        transform: translate(-60vw, 0);
+    }
+    100% {
+        opacity: 0.9;
+        transform: translate(0, 0);
+    }
+}
+
+.main {
+    color: white;
+    text-align: center;
+}
+.main--heading {
+    margin-bottom: 5px;
+}
+
+.button {
+    margin-top: 10px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    background-color: rgb(135, 111, 96);
+    padding: 10px 20px 10px 20px;
+    display: inline-block;
+    border-radius: 10000px;
+
+    transition: background-color 0.5s;
+}
+
+.button:hover {
+    background-color: rgb(36, 29, 25);
+}
