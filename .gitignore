@@ -1,6 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
+25-21-gulp/node_modules
 /node_modules
 /.pnp
 .pnp.js
