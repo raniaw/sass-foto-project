@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Images</title>
+    <style>
+      html {
+        font-size: 32px;
+      }
+      body {
+        background-color: rgb(220, 220, 220);
+      }
+
+      img {
+        border-radius: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <picture>
+      <!-- <source srcset="pexels-jaime-reimer-2662086.webp" media="(min-width: 800px)" /> -->
+      <source
+        srcset="
+          pexels-jaime-reimer-2662086-cropped.webp  500w,
+          pexels-jaime-reimer-2662086.webp         1280w
+        "
+        sizes="50vw"
+        type="image/webp"
+      />
+
+      <source
+        sizes="(min-width: 600px) 500px, 100px"
+        srcset="
+          pexels-simon-migaj-747964.jpg   250w,
+          pexels-jacub-gomez-1152043.jpg 1280w
+        "
+      />
+
+      <img src="pexels-simon-migaj-747964.jpg" alt="" />
+    </picture>
+
+    <!-- <img src="pexels-simon-migaj-747964.jpg" 
+        sizes="(min-width: 600px) 500px, 100px"
+        srcset="pexels-simon-migaj-747964.jpg 250w, pexels-jacub-gomez-1152043.jpg 1280w" />
+    -->
+  </body>
+</html>
